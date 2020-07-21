@@ -51,14 +51,14 @@ function App() {
       <form onSubmit={formik.handleSubmit}>
 
         <label htmlFor="firstName">First Name</label>
-        <input
+        {/* <input
           value = {formik.values.firstName}
           onChange = {formik.handleChange}
           onBlur={formik.handleBlur}
           type = 'text'
           name= 'firstName'
           id = 'firstName'
-        />
+        /> */}
         <input name="firstName" {...formik.getFieldProps('firstName')} />
         {formik.touched.firstName && formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
         {/* //formik.errors is populated via the custom validation function */}
